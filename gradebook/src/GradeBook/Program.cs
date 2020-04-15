@@ -3,10 +3,17 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
+
+
     class Program
     {
         static void Main(string[] args)
         {
+
+
+
+            // create the object of the class Book
+
 
             // main is the entry point of the code
             //Console.WriteLine("Hello World!");
@@ -152,7 +159,13 @@ namespace GradeBook
 
             var result3 = result2/grades.Count;
 
-            Console.WriteLine($"the avg is {result3}");
+            Console.WriteLine($"the avg is {result3:N2}");
+
+            // you nedd to formatting
+            // this value
+            // the N3 is the formatting 
+            // the value
+
 
 
 
