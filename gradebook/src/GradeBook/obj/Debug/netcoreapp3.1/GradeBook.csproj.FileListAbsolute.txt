@@ -1,0 +1,11 @@
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.deps.json
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.runtimeconfig.json
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.runtimeconfig.dev.json
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.dll
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.pdb
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.csprojAssemblyReference.cache
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.AssemblyInfoInputs.cache
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.AssemblyInfo.cs
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.dll
+/home/tanvir/storage/aspdontnetcore/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.pdb
