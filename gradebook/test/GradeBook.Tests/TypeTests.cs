@@ -94,6 +94,8 @@ namespace GradeBook.Tests
         // and then set the name
         // this ref Book book will tell 
         // that catch a reference have to catch
+
+        
         private void GetBookSetName(ref Book book,string name)
         {
             // now we can set the name
@@ -105,6 +107,37 @@ namespace GradeBook.Tests
         Book GetBook(string name)
         {
             return new Book(name);
+        }
+
+
+
+        // make another tests so that
+        // you will find when you work with string
+        // it behave like value types
+        // that means when you make a string 
+        // UPPER case it will return you a copy
+        // in a new memory not the same
+        // string
+
+        [Fact]
+        public void StringBehaveLikeValueTypes(){
+            string name = "Tanvir";
+            
+            // first typethe method
+            // and then CTRL+. 
+            // to make this function
+            var uppername = MakeThisUpper(name);
+
+            // if you assert with the 
+            // name and the uppername
+            // you will get an error
+        }
+
+        private string MakeThisUpper(string name)
+        {
+            // this will return a new string
+            // just like the python prgramming 
+            return name.ToUpper();
         }
     }
 }
