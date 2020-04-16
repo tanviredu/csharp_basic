@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
+    // add the access modifier
+    // in the book class
+    // to public to use the unit test
     public class Book
     {
         
@@ -76,35 +79,47 @@ namespace GradeBook
 
         }
 
-        public void showstat(){
+        // so now insted of returning void
+        // we return a class object
+        // and the name will change to GetStat
+
+        public stat GetStat(){
             // all the minimum value 
             // maximum value
             // and the avg value will be here
-            var result = 0.0;
-            var highgrade = double.MinValue; // a very low value
-            var lowgrade = double.MaxValue;  // a very high value
+
+            // create the object
+            var result = new stat();
+            result.Average = 0.0;
+            
+
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
+
 
             // calculayte this with a loop
 
-            foreach(var number in grades){
+            foreach(var grade in grades){
                 // you can use the grades because
                 // its in the class
-                lowgrade = Math.Min(number,lowgrade);
-                highgrade = Math.Max(number,highgrade);
-                result+=number;
+                result.Low = Math.Min(grade,result.Low);
+                result.Low= Math.Max(grade,result.High);
+                result.Average+=grade;
 
 
             }
 
             // now find the avg
-            result = result/grades.Count;
+            result.Average = result.Average/grades.Count;
 
             // now console log this
 
-            Console.WriteLine($"The lowest Grade is {lowgrade}");
-            Console.WriteLine($"The highest Grade is {highgrade}");
-            Console.WriteLine($"The avg Grade is {result:N2}");
+            // Console.WriteLine($"The lowest Grade is {lowgrade}");
+            // Console.WriteLine($"The highest Grade is {highgrade}");
+            // Console.WriteLine($"The avg Grade is {result:N2}");
 
+            // now we return the object
+            return result;
         }
 
         
