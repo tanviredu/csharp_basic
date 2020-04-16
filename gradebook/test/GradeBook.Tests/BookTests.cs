@@ -32,6 +32,7 @@ namespace GradeBook.Tests
             // last parameter 
             // is the precision
             Assert.Equal(73.1,result.Average,1);
+            Assert.Equal('C',result.letter);
 
             // this is how unit test improve your code
 

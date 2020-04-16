@@ -74,10 +74,47 @@ namespace GradeBook
             // you can not use it under a method
             // and you cant use implecit typing
             // now add the graders in the list
+            // added the branch in here
+            // if else
 
-            grades.Add(grade);
+            if(grade<=100 && grade >=0){
+                grades.Add(grade);
+            }else{
+                Console.WriteLine("InValid value");
+            }
 
         }
+
+
+        public void addLetterGrade(char letter){
+
+
+            // mappign the character with number
+            switch(letter){
+                case 'A':
+                    AddGrade(90);
+                    break;
+                case 'B':
+                    AddGrade(80);
+                    break;
+                case 'C':
+                    AddGrade(70);
+                    break;
+                default:
+                    AddGrade(0);
+                    break;
+
+            }
+        }
+
+
+
+
+
+
+
+
+
 
         // so now insted of returning void
         // we return a class object
@@ -103,7 +140,7 @@ namespace GradeBook
                 // you can use the grades because
                 // its in the class
                 result.Low = Math.Min(grade,result.Low);
-                result.Low= Math.Max(grade,result.High);
+                result.High= Math.Max(grade,result.High);
                 result.Average+=grade;
 
 
@@ -111,6 +148,29 @@ namespace GradeBook
 
             // now find the avg
             result.Average = result.Average/grades.Count;
+
+            // this is the enhanced version of c#
+            switch(result.Average){
+
+                // you can apply pattern like 
+                // if else in the switch case statement
+                case var d when d>=90.0:
+                    result.letter = 'A';
+                    break;
+
+                case var d when d>=80.0:
+                    result.letter = 'B';
+                    break;
+
+                case var d when d>=70.0:
+                    result.letter = 'C';
+                    break;
+
+                default:
+                    result.letter = 'F';
+                    break;
+            }
+
 
             // now console log this
 
