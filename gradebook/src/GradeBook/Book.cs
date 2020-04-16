@@ -80,7 +80,8 @@ namespace GradeBook
             if(grade<=100 && grade >=0){
                 grades.Add(grade);
             }else{
-                Console.WriteLine("InValid value");
+                // Console.WriteLine("InValid value");
+                throw new ArgumentException($"{nameof(grade)} is invalid");
             }
 
         }
