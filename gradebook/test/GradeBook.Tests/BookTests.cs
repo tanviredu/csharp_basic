@@ -6,7 +6,7 @@ namespace GradeBook.Tests
     public class BookTests
     {
         [Fact]
-        public void Test1()
+        public void BookCalculateAverageGrade()
         {
 
             // arrange the logic
@@ -31,7 +31,7 @@ namespace GradeBook.Tests
             var result = book.GetStat();
             // last parameter 
             // is the precision
-            Assert.Equal(85.6,result.Average,1);
+            Assert.Equal(73.1,result.Average,1);
 
             // this is how unit test improve your code
 

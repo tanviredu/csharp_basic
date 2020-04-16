@@ -30,7 +30,7 @@ namespace GradeBook
             // and only let user remove or add data with this method
 
             grades = new List<double>();
-            this.name = name;
+            Name = name;
         }
         
 
@@ -40,8 +40,8 @@ namespace GradeBook
         //language you can write things 
         //later because this is a compiled language 
 
-        private  List<double>grades;
-        private string name; // define a variable for the name of the book
+        public  List<double>grades;
+        public string Name; // define a variable for the name of the book
 
         // when you use the private
         // other class cant use it
