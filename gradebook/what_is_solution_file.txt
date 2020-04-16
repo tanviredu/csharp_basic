@@ -1,0 +1,12 @@
+solution file is like a automation script
+you can run and test multiple project
+with the solution file
+the command is 
+=> dotnet new sln
+=> dotnet sln add src/GradeBook/GradeBook.csproj 
+=> dotnet sln add test/GradeBook.Tests/GradeBook.Tests.csproj 
+
+
+
+now you can do both at the same time
+with the same command
