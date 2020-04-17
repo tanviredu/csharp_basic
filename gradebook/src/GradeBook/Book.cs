@@ -6,6 +6,15 @@ namespace GradeBook
     // add the access modifier
     // in the book class
     // to public to use the unit test
+    // you need to know the delegate
+    // to use event
+    // every deleget works as a even has two
+    // things sender and args
+    // what happen wehen you make a delegeate
+    // you make a bvariable name with it
+
+
+
     public class Book
     {
         
@@ -112,6 +121,11 @@ namespace GradeBook
             
             if(grade<=100 && grade >=0){
                 grades.Add(grade);
+
+
+
+
+
             }else{
                 // Console.WriteLine("InValid value");
                 throw new ArgumentException($"{nameof(grade)} is invalid");
@@ -119,6 +133,12 @@ namespace GradeBook
 
         }
 
+
+
+    //now make this function
+    
+
+    
 
         public void addLetterGrade(char letter){
 
