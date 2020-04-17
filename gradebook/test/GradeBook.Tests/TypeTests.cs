@@ -105,7 +105,7 @@ namespace GradeBook.Tests
             SetName(book1,"New Book Name");
     }
 
-        private void SetName(Book book, string name)
+        private void SetName(inMemoryBook book, string name)
         {
             book.Name = name;
             // yes you can change the 
@@ -133,17 +133,17 @@ namespace GradeBook.Tests
         // that catch a reference have to catch
 
         
-        private void GetBookSetName(ref Book book,string name)
+        private void GetBookSetName(ref inMemoryBook book,string name)
         {
             // now we can set the name
             // directly
 
-            book = new Book(name);
+            book = new inMemoryBook(name);
         }
 
-        Book GetBook(string name)
+        inMemoryBook GetBook(string name)
         {
-            return new Book(name);
+            return new inMemoryBook(name);
         }
 
 

@@ -16,7 +16,7 @@ namespace GradeBook.Tests
             // tell the compiler
             // dotnet add reference <path_to_the_project>
             // dotnet add reference ../../src/GradeBook/GradeBook.csproj
-            var book = new Book("");
+            var book = new inMemoryBook("");
             // add Geade to the book
             book.AddGrade(89.10);
             book.AddGrade(79.10);

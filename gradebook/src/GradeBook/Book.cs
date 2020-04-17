@@ -3,120 +3,73 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-    // add the access modifier
-    // in the book class
-    // to public to use the unit test
-    // you need to know the delegate
-    // to use event
-    // every deleget works as a even has two
-    // things sender and args
-    // what happen wehen you make a delegeate
-    // you make a bvariable name with it
 
 
+    public class NamedObject
+    {
+        // make aconstructr
 
-    public class Book
+        public  NamedObject(string name){
+            Name = name;
+        }
+        public string Name{
+            get;set;
+        }
+    }
+
+    // this book clas has a property name
+    // we all with the getter and the setter
+    // we can do that with the same
+    //inheritance
+
+    // sow after the inheritance
+    // this method will be avilabe with use
+    // now we need to just remove its method Name
+    // because we dont need it anymore we get it from the base class
+    // Named object
+    // do not make instance of the base class
+    // not a good idea
+    // but remember if your base class also has a constructor
+    // you need to feed the data with base() too
+    // like the super class in python
+
+
+    public abstract class Book :NamedObject{
+        public Book(string name) : base(name)
+        {
+        }
+
+        public abstract void AddGrade(double grade);
+        //now when you made a abstract method
+        // in a abstract class
+        // you must have to implement it
+        // with a keyword override
+
+
+    }
+    public class inMemoryBook:Book
     {
         
-        // change the constructor
-        // and add a parameter
-        public Book(string name){
-            // this is the constructor
-            // function
-            // now i create a List in thee
-            // this object is autometically generated here
-            // now in this valriable
-            // all the grades will be added
-            // now can we directly access this 
-            // or we need a method to access this
-            // to do this when you declare a list
-            // you need to add the public access modifier 
-            // this class the generic list class
-            // but this is not a good idea
-            // do not let people access the data structure
-            // that you are using from different class
-            //use public method
-            // and only let user remove or add data with this method
-
+        // this is the super class
+        // you constructing the constructor 
+        // of the book class
+        // and the base class
+        // at the same time
+        public inMemoryBook(string name) : base(name){
             grades = new List<double>();
             Name = name;
         }
         
 
-        // here you define the list
-        // and inside the constructor
-        // unlike other scripting
-        //language you can write things 
-        //later because this is a compiled language 
 
         public  List<double>grades;
         
-        
-        
-        //public string Name; // define a variable for the name of the book
-        //private string Name;
-        // when you make  a field
-        // public anyone can do anything with this
-        // but i also need to make sure that
-        // people can read and write in this
-        // so if i make it private i cant do that
-        // because then nobody can access
-        // but we can make a public method
-        // and put it on the public method
-        // so then you can use the private method
-        // through a public function
-        // and you cant directly use the field
-        //any more its called getter and setter
-        // you already know the name its getter and setter
-        // lets make it then
 
 
-        // this is how make the getter and setter
-        // private string name; // make a private field
-        // public string Name{
-          
-        //     // when you read it will send the get
-        //     get{
-        //         return name;
-
-        //         // you can set the 
-        //     }
-        //     set{
-        //         // you can make validation
-        //         // in the setter too
-        //         // and the value is coming is stored as value
-        //         // and you dont have too add method in it
-        //         if (String.IsNullOrEmpty(value)){
-        //         name = value;  // you dont have to write the parameter as value
-        //         }else{
-        //             Console.WriteLine("cant set the empty value");
-        //         }
-        //     }
-
-
-        // }
-
-            public string Name{
-                get;set;
-                // now you can set the get 
-                // and set public and private
-            }
-
-       // now you may wonder
-       // is it possible to make 
-       // method overloading
-       // like multiple method
-       //using the same name
-       // yes
-       // because c shrp can search not 
-       // only the name also method signeture
-       // method name
-       // parameter type and the type of parameter
-       // but remember csharp does not count
-       // so if you have different parameter
-       // the yes you can make different
-       // method at the same name
-        public void AddGrade(double grade){
+            // public string Name{
+            //     get;set;
+            // }
+        public override void AddGrade(double grade){
 
             
             if(grade<=100 && grade >=0){
@@ -132,11 +85,6 @@ namespace GradeBook
             }
 
         }
-
-
-
-    //now make this function
-    
 
     
 
@@ -170,16 +118,8 @@ namespace GradeBook
 
 
 
-        // so now insted of returning void
-        // we return a class object
-        // and the name will change to GetStat
-
+    
         public stat GetStat(){
-            // all the minimum value 
-            // maximum value
-            // and the avg value will be here
-
-            // create the object
             var result = new stat();
             result.Average = 0.0;
             
@@ -188,11 +128,7 @@ namespace GradeBook
             result.Low = double.MaxValue;
 
 
-            // calculayte this with a loop
-
             foreach(var grade in grades){
-                // you can use the grades because
-                // its in the class
                 result.Low = Math.Min(grade,result.Low);
                 result.High= Math.Max(grade,result.High);
                 result.Average+=grade;
@@ -200,14 +136,10 @@ namespace GradeBook
 
             }
 
-            // now find the avg
             result.Average = result.Average/grades.Count;
 
-            // this is the enhanced version of c#
             switch(result.Average){
 
-                // you can apply pattern like 
-                // if else in the switch case statement
                 case var d when d>=90.0:
                     result.letter = 'A';
                     break;
@@ -226,13 +158,6 @@ namespace GradeBook
             }
 
 
-            // now console log this
-
-            // Console.WriteLine($"The lowest Grade is {lowgrade}");
-            // Console.WriteLine($"The highest Grade is {highgrade}");
-            // Console.WriteLine($"The avg Grade is {result:N2}");
-
-            // now we return the object
             return result;
         }
 
