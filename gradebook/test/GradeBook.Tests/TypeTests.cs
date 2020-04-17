@@ -3,8 +3,45 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+
+
+
+    // setting deligate
+    // you make a method 
+    // by using variable
+    // you cant point this to multiple method
+    // and use multicast deligate
+
+    public delegate string WriteLogDelegate(string logmsg);
+    // thats it now write a function that it point 
+    // and write  a test to test it
     public class TypeTests
     {
+
+        [Fact]
+        public void writeLogDelegateCanPointToMethod(){
+            WriteLogDelegate log;
+
+            // so we make a variable log;
+            // now we make a method thats points to it
+            log = ReturnMessage;
+
+            // now when you invoke log it will use the function
+            // that you define and you can invoke multiple 
+            // method like one will log in the database
+            // one will log in the file
+            // one will log as csv just like this
+            var result = log("Hello");
+            // make a test
+            Assert.Equal("Hello",result);
+            
+        }
+
+        private string ReturnMessage(string logmsg)
+        {
+            return logmsg;
+        }
+
         [Fact]
         public void Test1()
         {
