@@ -41,11 +41,57 @@ namespace GradeBook
         //later because this is a compiled language 
 
         public  List<double>grades;
-        public string Name; // define a variable for the name of the book
+        
+        
+        
+        //public string Name; // define a variable for the name of the book
+        //private string Name;
+        // when you make  a field
+        // public anyone can do anything with this
+        // but i also need to make sure that
+        // people can read and write in this
+        // so if i make it private i cant do that
+        // because then nobody can access
+        // but we can make a public method
+        // and put it on the public method
+        // so then you can use the private method
+        // through a public function
+        // and you cant directly use the field
+        //any more its called getter and setter
+        // you already know the name its getter and setter
+        // lets make it then
 
-       
+
+        // this is how make the getter and setter
+        // private string name; // make a private field
+        // public string Name{
+          
+        //     // when you read it will send the get
+        //     get{
+        //         return name;
+
+        //         // you can set the 
+        //     }
+        //     set{
+        //         // you can make validation
+        //         // in the setter too
+        //         // and the value is coming is stored as value
+        //         // and you dont have too add method in it
+        //         if (String.IsNullOrEmpty(value)){
+        //         name = value;  // you dont have to write the parameter as value
+        //         }else{
+        //             Console.WriteLine("cant set the empty value");
+        //         }
+        //     }
 
 
+        // }
+
+            public string Name{
+                get;set;
+                // now you can set the get 
+                // and set public and private
+            }
 
        // now you may wonder
        // is it possible to make 

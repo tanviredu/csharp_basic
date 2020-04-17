@@ -56,6 +56,7 @@ namespace GradeBook
 
 
             var stat = book.GetStat();
+            Console.WriteLine($"The book name is {book.Name}"); // this is where you get the value the getter is getting invoked
             Console.WriteLine($"The lowest Grade is {stat.Low}");
             Console.WriteLine($"The highest Grade is {stat.High}");
             Console.WriteLine($"The avg Grade is {stat.Average:N2}");
