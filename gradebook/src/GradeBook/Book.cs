@@ -17,6 +17,21 @@ namespace GradeBook
         }
     }
 
+    // now we make a interface 
+    // the only difference is no implementation
+    // just tell what must be dont when you implement the class
+
+    public interface IBook{
+        //name the method
+
+        void AddGrade(double grade);
+        stat GetStat(); //define a get stat function that return a object
+        string Name { get; }
+    }
+
+
+
+
     // this book clas has a property name
     // we all with the getter and the setter
     // we can do that with the same
@@ -121,7 +136,7 @@ namespace GradeBook
     
         public stat GetStat(){
             var result = new stat();
-            result.Average = 0.0;
+            // Average = 0.0;
             
 
             result.High = double.MinValue;
