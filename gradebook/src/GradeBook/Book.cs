@@ -43,40 +43,27 @@ namespace GradeBook
         public  List<double>grades;
         public string Name; // define a variable for the name of the book
 
-        // when you use the private
-        // other class cant use it
-        // only this class can use this
-        // add CTRL+. to add the namespace            
-    
-        // now any method you add can access the 
-        // grades
+       
 
-        
-        
-        // this class is under the 
-        // Gradebook
-        // thats why we need the name 
-        // namespace gradebook
-        // we can put different class
-        // in the same file
-        // but in csharp we dont do that
-        //we create separate class
-        // in separate file
-        //class has properties and method
-        // the propertise are also called state
-        // and the method is also called the behaviour
+
+
+       // now you may wonder
+       // is it possible to make 
+       // method overloading
+       // like multiple method
+       //using the same name
+       // yes
+       // because c shrp can search not 
+       // only the name also method signeture
+       // method name
+       // parameter type and the type of parameter
+       // but remember csharp does not count
+       // so if you have different parameter
+       // the yes you can make different
+       // method at the same name
         public void AddGrade(double grade){
 
-            // in ghere you need to store the grade
-            // add the state/propertise/field
-            // if you want that the properties 
-            // will be used througout the program
-            // you can not use it under a method
-            // and you cant use implecit typing
-            // now add the graders in the list
-            // added the branch in here
-            // if else
-
+            
             if(grade<=100 && grade >=0){
                 grades.Add(grade);
             }else{
